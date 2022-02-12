@@ -208,7 +208,7 @@
 				// Add state?
 					if (typeof addState != 'undefined'
 					&&	addState === true)
-						history.pushState(null, null, '#');
+						history.pushState(null, null, ' ');
 
 				// Handle lock.
 
@@ -338,6 +338,8 @@
 				// Empty hash?
 					if (location.hash == ''
 					||	location.hash == '#') {
+						// Remove # from url
+							history.replaceState(null, null, ' ');
 
 						// Prevent default.
 							event.preventDefault();
@@ -350,7 +352,6 @@
 
 				// Otherwise, check for a matching article.
 					else if ($main_articles.filter(location.hash).length > 0) {
-
 						// Prevent default.
 							event.preventDefault();
 							event.stopPropagation();
