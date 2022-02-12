@@ -457,7 +457,6 @@
 
 	const youtubePlayers = document.querySelectorAll(".youtube-player");
 	youtubePlayers.forEach(function(youtubePlayer) {
-		console.log(youtubePlayer)
 		const src = youtubePlayer.getAttribute("data-src");
 		if(!src) return;
 
