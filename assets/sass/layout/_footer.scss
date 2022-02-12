@@ -7,11 +7,6 @@
 /* Footer */
 
 	#footer {
-		@include vendor('transition', (
-			'transform #{_duration(article)} ease-in-out',
-			'filter #{_duration(article)} ease-in-out',
-			'opacity #{_duration(article)} ease-in-out',
-		));
 		width: 100%;
 		max-width: 100%;
 		margin-top: 2rem;
@@ -25,13 +20,23 @@
 			text-transform: uppercase;
 		}
 
-		body.is-article-visible & {
-			//@include vendor('transform', 'scale(0.95)');
-			//@include vendor('filter', 'blur(0.1rem)');
-			//opacity: 0;
-		}
-
 		body.is-preload & {
 			opacity: 0;
+		}
+
+		.icons {
+			@include vendor('transition', (
+				'transform #{_duration(article)} ease-in-out',
+				'filter #{_duration(article)} ease-in-out',
+				'opacity #{_duration(article)} ease-in-out',
+			));
+			opacity: 0.75;
+
+			body.is-article-visible & {
+				@include vendor('transform', 'scale(0.95)');
+				@include vendor('filter', 'blur(0.1rem)');
+				opacity: 0;
+				pointer-events: none;
+			}
 		}
 	}
