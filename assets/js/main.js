@@ -401,13 +401,11 @@
 
 		function updateSwiperNavigationPosition(event) {
 			const activeSlide = event.visibleSlides[0];
-			const totalHeight = activeSlide.offsetHeight;
 			const imageHeight = activeSlide.firstElementChild.offsetHeight;
-			const imageHeightPercentage = imageHeight / totalHeight;
-			const navigationOffsetPercentage = (imageHeightPercentage / 2) * 100;
+			const offset = imageHeight / 2;
 
-			event.navigation.nextEl.style.top = navigationOffsetPercentage + "%";
-			event.navigation.prevEl.style.top = navigationOffsetPercentage + "%";
+			event.navigation.prevEl.style.transform = "translateY(" + (offset)  + "px)";
+			event.navigation.nextEl.style.transform = "translateY(" + (offset)  + "px)";
 		}
 
 		// Initialize swiper

@@ -986,8 +986,9 @@ button {
   margin-bottom: 8px;
 }
 .swiper .swiper-button-next, .swiper .swiper-button-prev {
+  top: 0;
   color: #ffffff;
-  transition: top 200ms;
+  transition: transform 300ms;
 }
 .swiper .swiper-button-next::after, .swiper .swiper-button-prev::after {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
