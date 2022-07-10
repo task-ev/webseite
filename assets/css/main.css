@@ -140,11 +140,12 @@ a {
   color: inherit;
 }
 a:hover {
+  color: #A5DBB8; /*geändert: color hinzugefügt*/
   border-bottom-color: transparent;
 }
 
 strong, b {
-  color: #ffffff;
+  /*color: #ffffff;*/ /*geändert: auskommentiert*/
   font-weight: 600;
 }
 
