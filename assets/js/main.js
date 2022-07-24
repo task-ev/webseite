@@ -195,6 +195,11 @@
 
 					}
 
+					// reset sliders
+					$article.children(".swiper").each(function() {
+						$(this)[0].swiper.slideTo(0, 0);
+					});
+
 			};
 
 			$main._hide = function(addState) {
@@ -280,6 +285,11 @@
 									}, delay);
 
 							}, 25);
+
+						// reset sliders
+						$article.children(".swiper").each(function() {
+							$(this)[0].swiper.slideTo(0, 0);
+						});
 
 					}, delay);
 
@@ -404,8 +414,17 @@
 			const imageHeight = activeSlide.firstElementChild.offsetHeight;
 			const offset = imageHeight / 2;
 
+			if (offset === 0) {
+				return;
+			}
+
 			event.navigation.prevEl.style.transform = "translateY(" + (offset)  + "px)";
 			event.navigation.nextEl.style.transform = "translateY(" + (offset)  + "px)";
+
+			window.setTimeout(function() {
+				event.navigation.prevEl.style.transition = "transform 300ms";
+				event.navigation.nextEl.style.transition = "transform 300ms";
+			}, 50);
 		}
 
 		// Initialize swiper
@@ -423,7 +442,6 @@
 			},
 			on: {
 				slideChange: function(event) {
-					console.log(event.slides)
 					updateSwiperNavigationPosition(event);
 
 					for(const slide of event.slides) {

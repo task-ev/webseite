@@ -140,12 +140,11 @@ a {
   color: inherit;
 }
 a:hover {
-  color: #A5DBB8; /*geändert: color hinzugefügt*/
   border-bottom-color: transparent;
 }
 
 strong, b {
-  /*color: #ffffff;*/ /*geändert: auskommentiert*/
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -212,7 +211,6 @@ h6 {
     font-size: 1.75rem;
     line-height: 1.4;
   }
-
   h2 {
     font-size: 1.25em;
     line-height: 1.5;
@@ -665,10 +663,6 @@ ul {
 ul li {
   padding-left: 0.5em;
 }
-/*eingefügt 24.07.22*/
-header ul {
-  list-style: none;	
-}
 ul.alt {
   list-style: none;
   padding-left: 0;
@@ -993,7 +987,6 @@ button {
 .swiper .swiper-button-next, .swiper .swiper-button-prev {
   top: 0;
   color: #ffffff;
-  transition: transform 300ms;
 }
 .swiper .swiper-button-next::after, .swiper .swiper-button-prev::after {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
@@ -1106,8 +1099,7 @@ button {
   -webkit-transition-delay: 0.75s;
   -ms-transition-delay: 0.75s;
   transition-delay: 0.75s;
-  background-image: radial-gradient(circle, rgba(19,21,25,0.75) 25%, rgba(19,21,25,0.35) 100%), url("../../images/overlay.png");
-  /*background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");*/
+  background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
   background-size: auto, 256px 256px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
@@ -1122,7 +1114,7 @@ button {
   -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
   -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
   transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-  background-image: url("../../images/bg14.jpg");
+  background-image: url("../../images/bg8.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
