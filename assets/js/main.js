@@ -154,6 +154,19 @@
 
 							}, delay);
 
+
+							// reset sliders
+							$currentArticle.children(".swiper").each(function() {
+								$(this)[0].swiper.slideTo(0, 0);
+
+								$(".youtube-player").each(function() {
+									$(this).removeClass("playing");
+									var iframe = $(this).children("iframe")
+									if (iframe) {
+										iframe.remove();
+									}
+								});
+							});
 					}
 
 				// Otherwise, handle as normal.
@@ -194,11 +207,6 @@
 							}, delay);
 
 					}
-
-					// reset sliders
-					$article.children(".swiper").each(function() {
-						$(this)[0].swiper.slideTo(0, 0);
-					});
 
 			};
 
@@ -289,6 +297,14 @@
 						// reset sliders
 						$article.children(".swiper").each(function() {
 							$(this)[0].swiper.slideTo(0, 0);
+
+							$(".youtube-player").each(function() {
+								$(this).removeClass("playing");
+								var iframe = $(this).children("iframe")
+								if (iframe) {
+									iframe.remove();
+								}
+							});
 						});
 
 					}, delay);
@@ -452,10 +468,8 @@
 						if (!iframe) continue;
 
 						// stop player
-						iframe.contentWindow.postMessage(JSON.stringify({
-							"event": "command",
-							"func": "pauseVideo"
-						}), "*");
+						iframe.remove();
+						player.classList.remove("playing");
 					}
 				},
 				resize: updateSwiperNavigationPosition
