@@ -475,9 +475,9 @@
 
 			if (youtubePlayer.parentElement.className.startsWith("swiper-")) {
 				previewImg.classList.add("swiper-lazy");
-				previewImg.setAttribute("data-src", "https://img.youtube.com/vi/" + src + "/sddefault.jpg");
+				previewImg.setAttribute("data-src", "https://i.ytimg.com/vi/" + src + "/sddefault.jpg");
 			} else {
-				previewImg.setAttribute("src", "https://img.youtube.com/vi/" + src + "/sddefault.jpg");
+				previewImg.setAttribute("src", "https://i.ytimg.com/vi/" + src + "/sddefault.jpg");
 			}
 			
 			youtubePlayer.appendChild(previewImg);
