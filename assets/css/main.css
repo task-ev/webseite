@@ -665,6 +665,9 @@ ul {
 ul li {
   padding-left: 0.5em;
 }
+header ul {
+  list-style: none;	
+}
 ul.alt {
   list-style: none;
   padding-left: 0;
