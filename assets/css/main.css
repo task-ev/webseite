@@ -707,7 +707,7 @@ ul.alt li:first-child {
   padding-top: 0;
 }
 
-ul.nolist {
+ul.nobullets {
   list-style: none;
 }
 
